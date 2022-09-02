@@ -1,1 +1,1 @@
-Create a script that switches the current user to the user betty.
+Create a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory.
