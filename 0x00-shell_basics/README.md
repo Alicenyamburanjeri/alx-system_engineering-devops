@@ -1,1 +1,1 @@
-this ismagic
+a readme
