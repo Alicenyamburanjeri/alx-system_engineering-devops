@@ -1,1 +1,1 @@
-hello files
+Display the content of the /etc/passwd file.
