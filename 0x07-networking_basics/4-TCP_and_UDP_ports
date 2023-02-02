@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# A ash script that displays the listening sockets
+# A bash script that displays the listening sockets
 # And the PID and name of the program to which each socket belongs
 
 netstat -1 --program
