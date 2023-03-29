@@ -1,0 +1,11 @@
+# configuring ssh to connect to a server without typing a password.
+# Requirements:
+# SSH client configuration must be configured to use the private key ~/.ssh/school
+# SSH client configuration must be configured to refuse to authenticate using a password
+Host *
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
