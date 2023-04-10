@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# a bash script that displays infoabout subdomains
+# a bash script that displays info about subdomains
 # domain zone is configured so that the subdomain www,
 # points to the load-balancer IP(lb-01).
 
 dns_configuration () {
-    link=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
-    echo "$2 $link" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+    link=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tail -1)
+    echo "$2 $link" | awk '{print "The subdomain " $1 " is a " $5 " record and points to " $6}'
 }
 
 if [ "$#" == 1 ]
